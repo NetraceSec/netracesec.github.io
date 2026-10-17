@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Real Name] | Netrace Security</title>
+    <title>[Your Name] — Offensive Security & AppSec Engineer</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2305070d'/><path d='M50 15 L80 30 V55 C80 72 50 87 50 87 C50 87 20 72 20 55 V30 Z' fill='none' stroke='%2338bdf8' stroke-width='6'/><path d='M38 62 V38 L62 62 V38' stroke='%23ffffff' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -16,38 +16,34 @@
 <body class="antialiased selection:bg-sky-500 selection:text-white min-h-screen flex flex-col justify-between bg-[#05070d] text-gray-200 font-sans grid-bg">
 
     <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 bg-[#05070d]/95 backdrop-blur-xl border-b border-white/10 w-full h-24">
+    <header class="sticky top-0 z-50 bg-[#05070d]/90 backdrop-blur-xl border-b border-white/10 w-full h-20">
         <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex justify-between items-center">
             <a href="#hero" class="text-xl font-black tracking-widest text-white uppercase flex items-center gap-3 group">
-                <svg class="w-7 h-7 text-sky-400 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                </svg>
-                <span class="tracking-tighter font-extrabold text-2xl">Hasnain I.</span>
-                <span class="text-xs font-mono text-sky-400/80 font-semibold border-l border-white/20 pl-3">NETRACE SEC</span>
+                <div class="w-3 h-3 rounded-full bg-sky-400 animate-pulse"></div>
+                <span class="tracking-tighter font-extrabold text-xl">[YOUR NAME]</span>
+                <span class="text-xs font-mono text-sky-400/80 font-semibold border-l border-white/20 pl-3">SEC_ENGINEER</span>
             </a>
 
             <!-- Navigation Links -->
-            <div class="hidden md:flex items-center space-x-10 text-xs font-mono tracking-widest uppercase text-gray-300 font-bold">
-                <a href="#overview" class="hover:text-sky-400 transition py-1">Overview</a>
-                <a href="#capabilities" class="hover:text-sky-400 transition py-1">Capabilities</a>
-                <a href="#research" class="hover:text-sky-400 transition py-1">Research</a>
-                <a href="#tooling" class="hover:text-sky-400 transition py-1">Tooling</a>
-                <a href="#contact" class="px-6 py-2.5 border border-sky-400/80 text-sky-400 hover:bg-sky-400 hover:text-slate-950 transition-all duration-300 font-bold tracking-widest rounded-xl shadow-[0_0_15px_rgba(56,189,248,0.2)]">Connect</a>
+            <div class="hidden md:flex items-center space-x-8 text-xs font-mono tracking-widest uppercase text-gray-300 font-bold">
+                <a href="#about" class="hover:text-sky-400 transition py-1">About</a>
+                <a href="#experience" class="hover:text-sky-400 transition py-1">Experience</a>
+                <a href="#projects" class="hover:text-sky-400 transition py-1">Projects</a>
+                <a href="#contact" class="px-5 py-2 border border-sky-400/80 text-sky-400 hover:bg-sky-400 hover:text-slate-950 transition-all duration-300 font-bold tracking-widest rounded-xl shadow-[0_0_15px_rgba(56,189,248,0.2)]">Get in Touch</a>
             </div>
 
             <!-- Mobile Menu Toggle -->
             <button id="menu-btn" class="md:hidden text-gray-200 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </nav>
 
         <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#05070d] border-b border-white/10 px-8 py-8 space-y-5 text-sm font-mono tracking-widest uppercase font-bold">
-            <a href="#overview" class="block text-gray-200 hover:text-sky-400">Overview</a>
-            <a href="#capabilities" class="block text-gray-200 hover:text-sky-400">Capabilities</a>
-            <a href="#research" class="block text-gray-200 hover:text-sky-400">Research</a>
-            <a href="#tooling" class="block text-gray-200 hover:text-sky-400">Tooling</a>
-            <a href="#contact" class="block text-center py-3 border border-sky-400 text-sky-400 rounded-xl font-bold mt-6">Connect</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#05070d] border-b border-white/10 px-6 py-6 space-y-4 text-xs font-mono tracking-widest uppercase font-bold">
+            <a href="#about" class="block text-gray-200 hover:text-sky-400">About</a>
+            <a href="#experience" class="block text-gray-200 hover:text-gray-400">Experience</a>
+            <a href="#projects" class="block text-gray-200 hover:text-sky-400">Projects</a>
+            <a href="#contact" class="block text-center py-2.5 border border-sky-400 text-sky-400 rounded-xl font-bold">Get in Touch</a>
         </div>
     </header>
 
@@ -55,249 +51,196 @@
     <main class="flex-grow">
         
         <!-- Hero Section -->
-        <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 lg:px-8 border-b border-white/10 overflow-hidden">
-            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-sky-500/20 via-sky-500/5 to-transparent blur-[160px] pointer-events-none"></div>
+        <section id="hero" class="relative min-h-[80vh] flex items-center justify-center px-6 lg:px-8 border-b border-white/10 overflow-hidden">
+            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-sky-500/15 via-sky-500/5 to-transparent blur-[140px] pointer-events-none"></div>
 
-            <div class="max-w-6xl w-full mx-auto space-y-10 relative z-10 py-20">
-                <div class="flex items-center gap-4 text-xs font-mono text-sky-400 uppercase tracking-widest font-bold">
-                    <span class="w-12 h-[2px] bg-sky-400"></span>
-                    <span>Offensive Security & Threat Engineering</span>
+            <div class="max-w-5xl w-full mx-auto space-y-8 relative z-10 py-16">
+                <div class="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full border border-sky-400/30 bg-sky-400/10 text-xs font-mono text-sky-400 font-bold uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+                    <span>Available for Full-Time Security Roles</span>
                 </div>
 
-                <div class="space-y-6">
-                    <h1 class="text-6xl sm:text-8xl lg:text-9xl font-black text-white tracking-tight leading-none uppercase">
-                        HASNAIN I.
+                <div class="space-y-4">
+                    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tight uppercase">
+                        [Your Name]
                     </h1>
-                    <p class="text-2xl sm:text-3xl text-gray-300 font-normal max-w-4xl tracking-tight leading-relaxed">
-                        Offensive security research, application vulnerability discovery, and automated security tooling.
+                    <p class="text-xl sm:text-2xl text-gray-300 font-normal max-w-3xl tracking-tight leading-relaxed">
+                        Offensive security engineer specializing in web application assessment, manual exploitation logic, and custom automation tooling.
                     </p>
                 </div>
 
-                <!-- Spec Cards -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/15 font-mono text-xs">
-                    <div class="space-y-1.5 p-5 border border-white/10 bg-white/[0.02] rounded-2xl">
-                        <span class="text-gray-400 uppercase block font-semibold">// Focus</span>
-                        <span class="text-white font-bold text-sm">AppSec & Logic Flaws</span>
+                <!-- Quick Metric Cards -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs pt-4">
+                    <div class="p-4 border border-white/10 bg-white/[0.02] rounded-2xl space-y-1">
+                        <span class="text-gray-500 uppercase font-semibold">// Focus</span>
+                        <p class="text-white font-bold text-sm">AppSec & Pentesting</p>
                     </div>
-                    <div class="space-y-1.5 p-5 border border-white/10 bg-white/[0.02] rounded-2xl">
-                        <span class="text-gray-400 uppercase block font-semibold">// Credentials</span>
-                        <span class="text-white font-bold text-sm">OSCP, Sec+</span>
+                    <div class="p-4 border border-white/10 bg-white/[0.02] rounded-2xl space-y-1">
+                        <span class="text-gray-500 uppercase font-semibold">// Certifications</span>
+                        <p class="text-white font-bold text-sm">OSCP, Security+</p>
                     </div>
-                    <div class="space-y-1.5 p-5 border border-white/10 bg-white/[0.02] rounded-2xl">
-                        <span class="text-gray-400 uppercase block font-semibold">// Standings</span>
-                        <span class="text-white font-bold text-sm">THM / HTB Top 1%</span>
+                    <div class="p-4 border border-white/10 bg-white/[0.02] rounded-2xl space-y-1">
+                        <span class="text-gray-500 uppercase font-semibold">// Platform Ranks</span>
+                        <p class="text-white font-bold text-sm">THM Top 1% / HTB</p>
                     </div>
-                    <div class="space-y-1.5 p-5 border border-white/10 bg-white/[0.02] rounded-2xl">
-                        <span class="text-gray-400 uppercase block font-semibold">// Research</span>
-                        <span class="text-white font-bold text-sm">CVEs & VDP Disclosures</span>
+                    <div class="p-4 border border-white/10 bg-white/[0.02] rounded-2xl space-y-1">
+                        <span class="text-gray-500 uppercase font-semibold">// Disclosures</span>
+                        <p class="text-white font-bold text-sm">CVEs & VDP Track</p>
                     </div>
                 </div>
 
-                <div class="pt-4 flex gap-5">
-                    <a href="#research" class="px-9 py-4 bg-white text-slate-950 font-bold text-xs uppercase tracking-widest hover:bg-sky-400 transition-all duration-300 rounded-xl shadow-[0_0_20px_rgba(255,255,255,0.15)]">
-                        View Research
+                <!-- Action Buttons & Terminal Snippet -->
+                <div class="pt-2 flex flex-wrap gap-4 items-center">
+                    <a href="#contact" class="px-8 py-3.5 bg-white text-slate-950 font-bold text-xs uppercase tracking-widest hover:bg-sky-400 transition-all duration-300 rounded-xl shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                        Hire Me
                     </a>
-                    <a href="#contact" class="px-9 py-4 border border-white/30 text-white font-bold text-xs uppercase tracking-widest hover:border-sky-400 hover:text-sky-400 transition-all duration-300 rounded-xl">
-                        Direct Contact
+                    <a href="#projects" class="px-8 py-3.5 border border-white/20 text-white font-bold text-xs uppercase tracking-widest hover:border-sky-400 hover:text-sky-400 transition-all duration-300 rounded-xl">
+                        View Projects
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Overview Section -->
-        <section id="overview" class="py-28 max-w-7xl mx-auto px-6 lg:px-8 border-b border-white/10">
+        <!-- About Section -->
+        <section id="about" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-b border-white/10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-span-4 space-y-3">
-                    <span class="text-xs font-mono text-sky-400 uppercase tracking-widest font-bold">// Technical Profile</span>
-                    <h2 class="text-4xl font-black text-white uppercase tracking-tight">Focus & Methodology</h2>
+                <div class="lg:col-span-4 space-y-2">
+                    <span class="text-xs font-mono text-sky-400 uppercase tracking-widest font-bold">// Background</span>
+                    <h2 class="text-3xl font-black text-white uppercase tracking-tight">Driven by Adversarial Curiosity</h2>
                 </div>
-                <div class="lg:col-span-8 space-y-6 text-gray-200 text-lg leading-relaxed font-normal">
+                <div class="lg:col-span-8 space-y-6 text-gray-300 text-base sm:text-lg leading-relaxed">
                     <p>
-                        I focus on identifying, analyzing, and mitigating critical logic vulnerabilities in complex web applications, access control mechanisms, and cloud infrastructure.
+                        I am an offensive security practitioner who bridges the gap between structured vulnerability discovery and practical software engineering. My technical foundation is built on rigorous hands-on labs, competitive CTF platforms, and real-world vulnerability research.
                     </p>
                     <p>
-                        My work combines manual adversary simulation, custom exploit code development, and systematic vulnerability disclosure across public VDPs and competitive CTF environments.
+                        Whether I'm dissecting complex access control logic flaws in web applications or building Python scripts to streamline asset discovery, I approach security engineering with precision, persistence, and a focus on measurable risk reduction.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Capabilities & Certifications -->
-        <section id="capabilities" class="py-28 max-w-7xl mx-auto px-6 lg:px-8 border-b border-white/10 space-y-12">
-            <div class="space-y-3">
-                <span class="text-xs font-mono text-sky-400 uppercase tracking-widest font-bold">// Qualifications</span>
-                <h2 class="text-4xl font-black text-white uppercase tracking-tight">Capabilities & Stack</h2>
+        <!-- Experience & Qualifications Section -->
+        <section id="experience" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-b border-white/10 space-y-12">
+            <div class="space-y-2">
+                <span class="text-xs font-mono text-sky-400 uppercase tracking-widest font-bold">// Track Record</span>
+                <h2 class="text-3xl font-black text-white uppercase tracking-tight">Experience & Certifications</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-8 border border-white/15 bg-[#090d17] space-y-6 hover:border-sky-400/60 transition-all duration-300 rounded-3xl shadow-lg">
-                    <span class="text-xs font-mono text-gray-400 uppercase block font-bold tracking-widest">[ CERTIFICATIONS & ACADEMICS ]</span>
+                <!-- Certifications Card -->
+                <div class="p-8 border border-white/10 bg-[#080c15] space-y-6 rounded-3xl shadow-xl">
+                    <span class="text-xs font-mono text-gray-400 uppercase font-bold tracking-widest">[ CREDENTIALS ]</span>
                     <div class="space-y-4 font-mono text-sm">
                         <div class="flex justify-between items-center py-3 border-b border-white/10">
                             <div>
                                 <div class="text-white font-bold">OSCP (OffSec Certified Professional)</div>
-                                <div class="text-xs text-gray-400 mt-1">Practical Penetration Testing & Exploit Chains</div>
+                                <div class="text-xs text-gray-400 mt-1">Penetration Testing & Exploit Chains</div>
                             </div>
-                            <span class="text-sky-400 text-xs font-bold px-2.5 py-1 border border-sky-400/30 bg-sky-400/10 rounded-lg shrink-0">VERIFIED</span>
+                            <span class="text-sky-400 text-xs font-bold px-2.5 py-1 border border-sky-400/30 bg-sky-400/10 rounded-lg">VERIFIED</span>
                         </div>
                         <div class="flex justify-between items-center py-3 border-b border-white/10">
                             <div>
                                 <div class="text-white font-bold">CompTIA Security+</div>
-                                <div class="text-xs text-gray-400 mt-1">Enterprise Risk Management & Core Security</div>
+                                <div class="text-xs text-gray-400 mt-1">Core Security & Risk Management</div>
                             </div>
-                            <span class="text-sky-400 text-xs font-bold px-2.5 py-1 border border-sky-400/30 bg-sky-400/10 rounded-lg shrink-0">VERIFIED</span>
+                            <span class="text-sky-400 text-xs font-bold px-2.5 py-1 border border-sky-400/30 bg-sky-400/10 rounded-lg">VERIFIED</span>
                         </div>
                         <div class="flex justify-between items-center py-3">
                             <div>
-                                <div class="text-white font-bold">PJPT / BTL1 Track</div>
-                                <div class="text-xs text-gray-400 mt-1">Active Directory & Incident Triage</div>
+                                <div class="text-white font-bold">TryHackMe / HackTheBox</div>
+                                <div class="text-xs text-gray-400 mt-1">Active Adversarial Labs & Pro Labs</div>
                             </div>
-                            <span class="text-sky-400 text-xs font-bold px-2.5 py-1 border border-sky-400/30 bg-sky-400/10 rounded-lg shrink-0">COMPLETED</span>
+                            <span class="text-sky-400 text-xs font-bold px-2.5 py-1 border border-sky-400/30 bg-sky-400/10 rounded-lg">TOP 1%</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="p-8 border border-white/15 bg-[#090d17] space-y-6 hover:border-sky-400/60 transition-all duration-300 rounded-3xl shadow-lg">
-                    <span class="text-xs font-mono text-gray-400 uppercase block font-bold tracking-widest">[ TECHNICAL TOOLSET ]</span>
-                    <div class="flex flex-wrap gap-2.5 font-mono text-xs font-bold">
-                        <span class="px-3.5 py-2 border border-white/15 text-white bg-white/[0.02] rounded-xl">Linux / Kali</span>
-                        <span class="px-3.5 py-2 border border-white/15 text-white bg-white/[0.02] rounded-xl">Python 3 Automation</span>
-                        <span class="px-3.5 py-2 border border-white/15 text-white bg-white/[0.02] rounded-xl">Bash Scripting</span>
-                        <span class="px-3.5 py-2 border border-white/15 text-white bg-white/[0.02] rounded-xl">Burp Suite Pro</span>
-                        <span class="px-3.5 py-2 border border-white/15 text-white bg-white/[0.02] rounded-xl">Wireshark Traffic Analysis</span>
-                        <span class="px-3.5 py-2 border border-white/15 text-white bg-white/[0.02] rounded-xl">Nmap Recon</span>
-                        <span class="px-3.5 py-2 border border-white/15 text-white bg-white/[0.02] rounded-xl">Metasploit Framework</span>
-                        <span class="px-3.5 py-2 border border-white/15 text-white bg-white/[0.02] rounded-xl">CI/CD Security Audit</span>
+                <!-- Technical Stack Card -->
+                <div class="p-8 border border-white/10 bg-[#080c15] space-y-6 rounded-3xl shadow-xl">
+                    <span class="text-xs font-mono text-gray-400 uppercase font-bold tracking-widest">[ TECHNICAL SKILLS ]</span>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+                        <span class="px-3.5 py-2 border border-white/10 text-white bg-white/[0.02] rounded-xl">Linux / Kali / Bash</span>
+                        <span class="px-3.5 py-2 border border-white/10 text-white bg-white/[0.02] rounded-xl">Python 3 Automation</span>
+                        <span class="px-3.5 py-2 border border-white/10 text-white bg-white/[0.02] rounded-xl">Burp Suite Professional</span>
+                        <span class="px-3.5 py-2 border border-white/10 text-white bg-white/[0.02] rounded-xl">Nmap / Recon Tools</span>
+                        <span class="px-3.5 py-2 border border-white/10 text-white bg-white/[0.02] rounded-xl">Wireshark Analysis</span>
+                        <span class="px-3.5 py-2 border border-white/10 text-white bg-white/[0.02] rounded-xl">AppSec Vulnerabilities</span>
+                        <span class="px-3.5 py-2 border border-white/10 text-white bg-white/[0.02] rounded-xl">Git & CI/CD Security</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Research, CVEs & CTFs -->
-        <section id="research" class="py-28 max-w-7xl mx-auto px-6 lg:px-8 border-b border-white/10 space-y-12">
-            <div class="space-y-3">
-                <span class="text-xs font-mono text-sky-400 uppercase tracking-widest font-bold">// Proof of Work</span>
-                <h2 class="text-4xl font-black text-white uppercase tracking-tight">Research & Disclosures</h2>
+        <!-- Projects & Research Section -->
+        <section id="projects" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-b border-white/10 space-y-12">
+            <div class="space-y-2">
+                <span class="text-xs font-mono text-sky-400 uppercase tracking-widest font-bold">// Portfolio Work</span>
+                <h2 class="text-3xl font-black text-white uppercase tracking-tight">Research & Open-Source Tools</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Disclosures -->
-                <div class="p-8 border border-white/15 bg-[#090d17] space-y-5 hover:border-sky-400/60 transition-all duration-300 rounded-3xl">
-                    <div class="flex justify-between items-center">
-                        <span class="text-xs font-mono text-sky-400 uppercase font-bold">[ DISCLOSURES ]</span>
-                        <span class="text-[10px] font-mono bg-sky-400/10 text-sky-400 border border-sky-400/30 px-2 py-0.5 rounded-md">Public & Private</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white uppercase">CVEs & VDP Submissions</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                        Responsible vulnerability disclosure submissions, CVE tracking research, and public hall of fame awards across major web assets.
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Research Item -->
+                <div class="p-8 border border-white/10 bg-[#080c15] space-y-4 rounded-3xl hover:border-sky-400/50 transition duration-300">
+                    <span class="text-xs font-mono text-sky-400 font-bold">[ VULNERABILITY RESEARCH ]</span>
+                    <h3 class="text-xl font-bold text-white uppercase">VDP Disclosures & CVE Tracking</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Responsible identification and disclosure of logic bypasses, broken authentication flows, and IDOR vulnerabilities across target platforms.
                     </p>
-                    <div class="pt-2 text-xs font-mono text-gray-400 space-y-1 border-t border-white/10">
-                        <div><strong class="text-white">• Vulnerabilities:</strong> IDOR, Broken Auth, XSS</div>
-                        <div><strong class="text-white">• Impact:</strong> Logic Bypass & Privilege Escalation</div>
-                    </div>
                 </div>
 
-                <!-- Competitions -->
-                <div class="p-8 border border-white/15 bg-[#090d17] space-y-5 hover:border-sky-400/60 transition-all duration-300 rounded-3xl">
-                    <div class="flex justify-between items-center">
-                        <span class="text-xs font-mono text-sky-400 uppercase font-bold">[ CTF STANDINGS ]</span>
-                        <span class="text-[10px] font-mono bg-sky-400/10 text-sky-400 border border-sky-400/30 px-2 py-0.5 rounded-md">Global Ranks</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white uppercase">Platform Leaderboards</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                        Continuous hands-on practice across adversarial labs, machine exploitation, and competitive CTF events.
+                <!-- Tooling Item -->
+                <div class="p-8 border border-white/10 bg-[#080c15] space-y-4 rounded-3xl hover:border-sky-400/50 transition duration-300">
+                    <span class="text-xs font-mono text-sky-400 font-bold">[ AUTOMATION SUITE ]</span>
+                    <h3 class="text-xl font-bold text-white uppercase">Custom Security Utility Scripts</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Lightweight Python and Bash automation tools designed for swift log parsing, target enumeration, and proof-of-concept validation.
                     </p>
-                    <div class="pt-2 text-xs font-mono text-gray-400 space-y-1 border-t border-white/10">
-                        <div><strong class="text-white">• TryHackMe:</strong> Top 1% Global Ranking</div>
-                        <div><strong class="text-white">• HackTheBox:</strong> Pro Labs & Insane Machine Writeups</div>
-                    </div>
-                </div>
-
-                <!-- Threat Intel -->
-                <div class="p-8 border border-white/15 bg-[#090d17] space-y-5 hover:border-sky-400/60 transition-all duration-300 rounded-3xl">
-                    <div class="flex justify-between items-center">
-                        <span class="text-xs font-mono text-sky-400 uppercase font-bold">[ ANALYSIS ]</span>
-                        <span class="text-[10px] font-mono bg-sky-400/10 text-sky-400 border border-sky-400/30 px-2 py-0.5 rounded-md">Publications</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white uppercase">Threat Intelligence</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                        Technical writeups detailing payload mechanics, bypass techniques, and incident response log parsing strategies.
-                    </p>
-                    <div class="pt-2 text-xs font-mono text-gray-400 space-y-1 border-t border-white/10">
-                        <div><strong class="text-white">• Topics:</strong> AppSec Logic Flaws & Exploit Mitigation</div>
-                        <div><strong class="text-white">• Format:</strong> Deep-Dive Walkthroughs</div>
-                    </div>
+                    <a href="https://github.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-mono text-sky-400 font-bold uppercase hover:underline pt-1">
+                        <span>Check GitHub Repositories</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Tooling -->
-        <section id="tooling" class="py-28 max-w-7xl mx-auto px-6 lg:px-8 border-b border-white/10 space-y-10">
-            <div class="space-y-3">
-                <span class="text-xs font-mono text-sky-400 uppercase tracking-widest font-bold">// Development</span>
-                <h2 class="text-4xl font-black text-white uppercase tracking-tight">Custom Security Tools</h2>
-            </div>
-
-            <div class="p-10 border border-white/15 bg-[#090d17] space-y-6 hover:border-sky-400/60 transition-all duration-300 rounded-3xl">
-                <div class="flex justify-between items-start flex-wrap gap-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white font-mono uppercase">Reconnaissance & Automation Suite</h3>
-                        <p class="text-xs font-mono text-gray-400 mt-1">Python 3 / Bash / Multi-Threaded Triage</p>
-                    </div>
-                    <span class="text-xs font-mono text-sky-400 border border-sky-400/40 px-3 py-1 bg-sky-400/10 font-bold rounded-lg">OPEN SOURCE</span>
-                </div>
-                <p class="text-gray-200 leading-relaxed text-base font-normal max-w-4xl">
-                    Custom utility scripts built for fast log parsing, target enumeration, asset mapping, and automated proof-of-concept validation during security engagements.
-                </p>
-                <a href="https://github.com/NetraceSec" target="_blank" class="inline-flex items-center gap-3 text-xs font-mono text-sky-400 font-bold uppercase tracking-widest hover:underline pt-2">
-                    <span>Explore Repositories on GitHub</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </div>
-        </section>
-
-        <!-- Expanded Contact Panel -->
-        <section id="contact" class="bg-[#020408] border-t border-white/15 py-28 relative overflow-hidden">
+        <!-- Contact Section -->
+        <section id="contact" class="bg-[#020307] py-24 relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 space-y-5">
+                <div class="lg:col-span-6 space-y-4">
                     <span class="text-xs font-mono text-sky-400 uppercase tracking-widest font-bold">// Direct Outreach</span>
-                    <h2 class="text-4xl sm:text-5xl font-black text-white uppercase tracking-tight">Initiate Connection</h2>
-                    <p class="text-gray-300 text-lg font-normal leading-relaxed max-w-xl">
-                        Open for professional cybersecurity roles, technical collaborations, and vulnerability research inquiries.
+                    <h2 class="text-4xl font-black text-white uppercase tracking-tight">Let's Connect</h2>
+                    <p class="text-gray-300 text-base leading-relaxed max-w-lg">
+                        I am currently looking for full-time opportunities in offensive security, penetration testing, or application security. Let's talk about how I can add value to your security team.
                     </p>
                 </div>
 
-                <div class="lg:col-span-6 p-8 border border-white/15 bg-[#050811] shadow-2xl space-y-6 font-mono text-sm rounded-3xl">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center py-3 border-b border-white/10">
-                            <span class="text-gray-400 font-medium">Direct Email</span>
-                            <span id="email-box" class="text-sky-400 font-bold">Revealing...</span>
-                        </div>
-                        <div class="flex justify-between items-center py-3 border-b border-white/10">
-                            <span class="text-gray-400 font-medium">GitHub Repository</span>
-                            <a href="https://github.com/NetraceSec" target="_blank" class="text-sky-400 font-bold hover:underline">NetraceSec</a>
-                        </div>
-                        <div class="flex justify-between items-center py-3">
-                            <span class="text-gray-400 font-medium">Status</span>
-                            <span class="text-sky-400 font-bold text-xs uppercase px-3 py-1 border border-sky-400/30 bg-sky-400/10 rounded-lg">Available for Roles</span>
-                        </div>
+                <div class="lg:col-span-6 p-8 border border-white/10 bg-[#050811] shadow-2xl space-y-5 font-mono text-sm rounded-3xl">
+                    <div class="flex justify-between items-center py-3 border-b border-white/10">
+                        <span class="text-gray-400">Direct Email</span>
+                        <span id="email-box" class="text-sky-400 font-bold">Loading...</span>
+                    </div>
+                    <div class="flex justify-between items-center py-3 border-b border-white/10">
+                        <span class="text-gray-400">GitHub Profile</span>
+                        <a href="https://github.com" target="_blank" class="text-sky-400 font-bold hover:underline">View Profile</a>
+                    </div>
+                    <div class="flex justify-between items-center py-3">
+                        <span class="text-gray-400">Employment Status</span>
+                        <span class="text-sky-400 font-bold text-xs uppercase px-3 py-1 border border-sky-400/30 bg-sky-400/10 rounded-lg">Seeking Full-Time</span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Integrated Footer -->
-    <footer class="py-10 border-t border-white/10 bg-[#020408] w-full font-mono text-xs text-gray-400">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="font-bold tracking-wider">
-                [YOUR REAL NAME] <span class="text-sky-400">/ NETRACE SEC</span>
-            </div>
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/10 bg-[#020307] w-full font-mono text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-bold tracking-wider">[YOUR NAME] &bull; SECURITY PORTFOLIO</div>
             <div>&copy; 2026. All rights reserved.</div>
         </div>
     </footer>
 
-    <!-- Interactive Scripts -->
+    <!-- Scripts -->
     <script>
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
