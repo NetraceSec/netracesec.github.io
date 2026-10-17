@@ -41,32 +41,19 @@
             background-position: 0 0, 16px 16px;
         }
 
-        /* Tactile Crumble / Wrinkled Paper Texture (Optimized for performance) */
-        .crumble-effect::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='crumbleFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='2' result='noise'/%3E%3CfeDiffuseLighting in='noise' lighting-color='%23ffffff' surfaceScale='2.5'%3E%3CfeDistantLight azimuth='45' elevation='60'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23crumbleFilter)' opacity='0.06'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 99;
-            mix-blend-mode: multiply;
-            will-change: transform;
-            transform: translateZ(0);
-        }
-
         .glow-box {
             box-shadow: 0 0 25px -5px rgba(217, 119, 6, 0.15);
         }
         .header-glass {
-            background: rgba(241, 245, 249, 0.65); /* Slightly lighter & very clean */
-            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+            background: rgba(241, 245, 249, 0.75);
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
         }
     </style>
 </head>
-<body class="antialiased selection:bg-amber-400 selection:text-obsidian min-h-screen flex flex-col justify-between bg-silverBg text-slate-800 font-sans dot-pattern crumble-effect pb-8">
+<body class="antialiased selection:bg-amber-400 selection:text-obsidian min-h-screen flex flex-col justify-between bg-silverBg text-slate-800 font-sans dot-pattern pb-8">
 
     <!-- Header Navigation (Lighter & Optimized Blur) -->
-    <header class="sticky top-0 z-50 header-glass backdrop-blur-md border-b border-slate-300/80 w-full h-24">
+    <header class="sticky top-0 z-50 header-glass backdrop-blur-sm border-b border-slate-300/80 w-full h-24">
         <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex justify-between items-center">
 
             <!-- Logo Branding -->
