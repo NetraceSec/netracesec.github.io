@@ -43,12 +43,16 @@
         .glow-box {
             box-shadow: 0 0 25px -5px rgba(217, 119, 6, 0.15);
         }
+        .header-glass {
+            background: rgba(241, 245, 249, 0.85);
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-amber-400 selection:text-obsidian min-h-screen flex flex-col justify-between bg-silverBg text-slate-800 font-sans dot-pattern pb-8">
 
-    <!-- Header Navigation (Subtle Silver Backdrop & Border Accent) -->
-    <header class="sticky top-0 z-50 bg-slate-300/40 backdrop-blur-xl border-b border-slate-300/90 w-full h-24">
+    <!-- Header Navigation (Elevated Silver Glass Layer) -->
+    <header class="sticky top-0 z-50 header-glass backdrop-blur-md border-b border-slate-300/80 w-full h-24">
         <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex justify-between items-center">
 
             <!-- Logo Branding -->
@@ -75,7 +79,7 @@
         </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-300/90 border-b border-slate-300 px-8 py-8 space-y-5 text-sm font-mono tracking-widest uppercase font-extrabold text-amberDarkGold">
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-100 border-b border-slate-300 px-8 py-8 space-y-5 text-sm font-mono tracking-widest uppercase font-extrabold text-amberDarkGold shadow-lg">
             <a href="#about" class="block hover:text-obsidian">About</a>
             <a href="#capabilities" class="block hover:text-obsidian">Qualifications</a>
             <a href="#research" class="block hover:text-obsidian">Work & Tools</a>
@@ -291,8 +295,8 @@
                     </div>
                 </section>
 
-                <!-- Footer (Matching Soft Metallic Backdrop) -->
-                <footer class="py-8 px-6 sm:px-10 bg-slate-200/60 border-t border-slate-300 font-mono text-xs text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <!-- Footer (Clean Slate Off-White Inset Panel) -->
+                <footer class="py-8 px-6 sm:px-10 bg-slate-100/90 border-t border-slate-200 font-mono text-xs text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <div class="font-bold tracking-wider">
                         [Your Name] <span class="text-amberGold">/ NETRACE SEC</span>
                     </div>
