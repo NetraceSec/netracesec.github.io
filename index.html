@@ -8,7 +8,7 @@
     <!-- Pro Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800;900&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -22,9 +22,9 @@
                     colors: {
                         obsidian: '#0b0f17',     /* Dark Text & Contrast Elements */
                         amberGold: '#d97706',     /* Rich Amber Yellow Accent */
-                        subtleBorder: '#cbd5e1',  /* Soft Silver Border */
-                        silverBg: '#f1f5f9',      /* Soft Silver Canvas */
-                        silverCard: '#ffffff',    /* Clean White Card Surface */
+                        subtleBorder: '#cbd5e1',  /* Soft Silver/Slate Border */
+                        silverBg: '#e2e8f0',      /* Soft Anti-Glare Slate Canvas */
+                        silverCard: '#ffffff',    /* Clean White Premium Card Surface */
                     }
                 }
             }
@@ -32,7 +32,7 @@
     </script>
     <style>
         .dot-pattern {
-            background-image: radial-gradient(rgba(15, 23, 42, 0.1) 1.5px, transparent 0);
+            background-image: radial-gradient(rgba(15, 23, 42, 0.12) 1.5px, transparent 0);
             background-size: 32px 32px;
         }
         .glow-box {
@@ -46,10 +46,13 @@
     <header class="sticky top-0 z-50 bg-silverBg/95 backdrop-blur-xl border-b border-subtleBorder w-full h-24">
         <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex justify-between items-center">
 
-            <a href="#hero" class="text-2xl font-black tracking-widest text-obsidian uppercase flex items-center gap-3.5 group">
-                <div class="w-3.5 h-3.5 rounded-sm bg-amberGold"></div>
+            <!-- Logo Branding -->
+            <a href="#hero" class="text-2xl font-black tracking-widest text-obsidian uppercase flex items-center gap-3 group">
+                <!-- Plus Icon Accent -->
+                <span class="text-2xl font-black text-amberGold leading-none select-none">+</span>
                 <span class="tracking-tighter font-extrabold text-2xl text-obsidian">[YOUR NAME]</span>
-                <span class="text-xs font-mono text-amberGold bg-amber-100 font-bold px-3 py-1 rounded-md border border-amber-300 uppercase tracking-widest">NETRACE SEC</span>
+                <!-- Cold, Borderless Tag -->
+                <span class="text-xs font-mono text-slate-600 font-extrabold uppercase tracking-widest pl-1">NETRACE SECURITY</span>
             </a>
 
             <!-- Navigation Links -->
@@ -78,14 +81,17 @@
     <main class="flex-grow">
         <!-- Hero Section -->
         <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 lg:px-8 border-b border-subtleBorder overflow-hidden">
-            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-amberGold/15 via-amberGold/5 to-transparent blur-[160px] pointer-events-none"></div>
 
             <div class="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 py-16">
                 
                 <!-- Left Column: Intro -->
-                <div class="lg:col-span-7 space-y-8">
+                <div class="lg:col-span-7 space-y-8 relative">
+
+                    <!-- Concentrated Ambient Glow directly behind Name Title -->
+                    <div class="absolute top-12 left-0 w-80 h-32 bg-amberGold/20 blur-[70px] pointer-events-none rounded-full -z-10"></div>
+
                     <!-- Amber Professional Status Pill -->
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl border border-amber-300 bg-amber-50 text-xs font-mono text-amberGold font-bold uppercase tracking-widest shadow-sm">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl border border-amber-300 bg-amber-50/80 text-xs font-mono text-amberGold font-bold uppercase tracking-widest shadow-sm">
                         <span class="w-2.5 h-2.5 rounded-sm bg-amberGold"></span>
                         <span>Available for Full-Time Cybersecurity Positions</span>
                     </div>
@@ -95,7 +101,7 @@
                             [Your Name]
                         </h1>
                         <!-- Stylized terminal subtitle -->
-                        <p class="text-xs font-mono text-amberGold font-bold uppercase tracking-widest bg-amber-100/70 inline-block px-3 py-1.5 rounded border border-amber-300/80">
+                        <p class="text-xs font-mono text-amberGold font-bold uppercase tracking-widest bg-amber-100/80 inline-block px-3 py-1.5 rounded border border-amber-300/80">
                             &gt; root@netrace-sec:~# init --profile offensive-security
                         </p>
                         <p class="text-xl sm:text-2xl text-slate-700 font-semibold max-w-xl leading-relaxed">
@@ -161,8 +167,8 @@
             </div>
         </section>
 
-        <!-- NARROWER & SLIGHTLY SHIFTED RIGHT (LEFT-OFFSET) MASTER CONTAINER -->
-        <div class="max-w-3xl mx-4 sm:mx-8 lg:ml-32 xl:ml-48 my-20 relative z-20">
+        <!-- NARROW & RIGHT-SHIFTED MASTER CONTAINER -->
+        <div class="max-w-3xl mx-4 sm:mx-8 lg:ml-56 xl:ml-80 mt-20 mb-36 relative z-20">
             
             <!-- Overlapping Modern Floating Badge -->
             <div class="absolute -top-4 left-8 px-4 py-1.5 bg-obsidian text-amberGold text-xs font-mono font-bold tracking-widest uppercase rounded-lg border border-amber-500/40 shadow-xl z-30 flex items-center gap-2">
@@ -181,7 +187,7 @@
 
                     <div class="grid grid-cols-1 gap-6">
                         <!-- Certs -->
-                        <div class="p-6 bg-silverBg border border-subtleBorder space-y-5 rounded-2xl shadow-sm">
+                        <div class="p-6 bg-slate-100/70 border border-subtleBorder space-y-5 rounded-2xl shadow-sm">
                             <span class="text-xs font-mono text-amberGold uppercase block font-extrabold tracking-widest">[ CERTIFICATIONS ]</span>
                             <div class="space-y-3 font-mono text-xs sm:text-sm">
                                 <div class="flex justify-between items-center py-2 border-b border-slate-200">
@@ -209,7 +215,7 @@
                         </div>
 
                         <!-- Toolset -->
-                        <div class="p-6 bg-silverBg border border-subtleBorder space-y-5 rounded-2xl shadow-sm">
+                        <div class="p-6 bg-slate-100/70 border border-subtleBorder space-y-5 rounded-2xl shadow-sm">
                             <span class="text-xs font-mono text-amberGold uppercase block font-extrabold tracking-widest">[ TECHNICAL TOOLSET ]</span>
                             <div class="flex flex-wrap gap-2.5 font-mono text-xs font-bold">
                                 <span class="px-3.5 py-2 bg-white border border-slate-300 text-obsidian rounded-xl shadow-sm">Linux / Kali</span>
@@ -232,7 +238,7 @@
                     </div>
 
                     <div class="grid grid-cols-1 gap-6">
-                        <div class="p-6 bg-silverBg border border-subtleBorder space-y-4 rounded-2xl shadow-sm">
+                        <div class="p-6 bg-slate-100/70 border border-subtleBorder space-y-4 rounded-2xl shadow-sm">
                             <span class="text-xs font-mono text-amberGold uppercase font-bold">[ BUG REPORTS & CVES ]</span>
                             <h3 class="text-xl font-bold text-obsidian uppercase">Vulnerability Reports</h3>
                             <p class="text-base text-slate-700 leading-relaxed font-normal">
@@ -240,7 +246,7 @@
                             </p>
                         </div>
 
-                        <div class="p-6 bg-silverBg border border-subtleBorder space-y-4 rounded-2xl shadow-sm">
+                        <div class="p-6 bg-slate-100/70 border border-subtleBorder space-y-4 rounded-2xl shadow-sm">
                             <span class="text-xs font-mono text-amberGold uppercase font-bold">[ SOFTWARE DEVELOPMENT ]</span>
                             <h3 class="text-xl font-bold text-obsidian uppercase">Custom Security Tools</h3>
                             <p class="text-base text-slate-700 leading-relaxed font-normal">
@@ -264,7 +270,7 @@
                         </p>
                     </div>
 
-                    <div class="p-6 bg-silverBg border border-slate-300 shadow-md space-y-4 font-mono text-xs sm:text-sm rounded-2xl">
+                    <div class="p-6 bg-slate-100/70 border border-slate-300 shadow-md space-y-4 font-mono text-xs sm:text-sm rounded-2xl">
                         <div class="flex justify-between items-center py-2 border-b border-slate-200">
                             <span class="text-slate-500 font-medium">Direct Email</span>
                             <span id="email-box" class="text-amberGold font-bold">Loading...</span>
@@ -280,7 +286,7 @@
                     </div>
                 </section>
 
-                <!-- Footer (Inside the Card) -->
+                <!-- Footer (Inside Card Container) -->
                 <footer class="py-8 px-6 sm:px-10 bg-slate-100 font-mono text-xs text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <div class="font-bold tracking-wider">
                         [YOUR NAME] <span class="text-amberGold">/ NETRACE SEC</span>
