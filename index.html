@@ -40,29 +40,31 @@
             background-size: 32px 32px, 64px 64px;
             background-position: 0 0, 16px 16px;
         }
-        /* Subtle tactile noise texture */
-        .noise-texture::before {
+
+        /* Tactile Crumble / Wrinkled Paper Texture */
+        .crumble-effect::before {
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='crumbleFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise'/%3E%3CfeDiffuseLighting in='noise' lighting-color='%23ffffff' surfaceScale='2.5'%3E%3CfeDistantLight azimuth='45' elevation='60'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23crumbleFilter)' opacity='0.06'/%3E%3C/svg%3E");
             pointer-events: none;
             z-index: 99;
-            mix-blend-mode: overlay;
+            mix-blend-mode: multiply;
         }
+
         .glow-box {
             box-shadow: 0 0 25px -5px rgba(217, 119, 6, 0.15);
         }
         .header-glass {
-            background: rgba(203, 213, 225, 0.65);
-            box-shadow: 0 4px 25px -2px rgba(15, 23, 42, 0.12);
+            background: rgba(226, 232, 240, 0.55);
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
         }
     </style>
 </head>
-<body class="antialiased selection:bg-amber-400 selection:text-obsidian min-h-screen flex flex-col justify-between bg-silverBg text-slate-800 font-sans dot-pattern noise-texture pb-8">
+<body class="antialiased selection:bg-amber-400 selection:text-obsidian min-h-screen flex flex-col justify-between bg-silverBg text-slate-800 font-sans dot-pattern crumble-effect pb-8">
 
-    <!-- Header Navigation (Slightly Darker & Extra Blurred) -->
-    <header class="sticky top-0 z-50 header-glass backdrop-blur-xl border-b border-slate-300/90 w-full h-24">
+    <!-- Header Navigation (Slightly Lighter & Ultra-Blurred) -->
+    <header class="sticky top-0 z-50 header-glass backdrop-blur-2xl border-b border-slate-300/80 w-full h-24">
         <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex justify-between items-center">
 
             <!-- Logo Branding -->
@@ -89,7 +91,7 @@
         </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-200 border-b border-slate-300 px-8 py-8 space-y-5 text-sm font-mono tracking-widest uppercase font-extrabold text-amberDarkGold shadow-lg">
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-200/90 border-b border-slate-300 px-8 py-8 space-y-5 text-sm font-mono tracking-widest uppercase font-extrabold text-amberDarkGold shadow-lg">
             <a href="#about" class="block hover:text-obsidian">About</a>
             <a href="#capabilities" class="block hover:text-obsidian">Qualifications</a>
             <a href="#research" class="block hover:text-obsidian">Work & Tools</a>
@@ -305,8 +307,8 @@
                     </div>
                 </section>
 
-                <!-- Footer (Slightly Darker Off-White Panel) -->
-                <footer class="py-8 px-6 sm:px-10 bg-slate-200/80 border-t border-slate-300 font-mono text-xs text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <!-- Footer (Off-White Panel) -->
+                <footer class="py-8 px-6 sm:px-10 bg-slate-100/90 border-t border-slate-200 font-mono text-xs text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <div class="font-bold tracking-wider">
                         [Your Name] <span class="text-amberGold">/ NETRACE SEC</span>
                     </div>
