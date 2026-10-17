@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Name] | Netrace Security</title>
+    <title>[Your Real Name] | Netrace Security</title>
     
     <!-- Pro Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Plus+Jakarta+Sans:wght@500;700;800;900&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -20,330 +20,58 @@
                         mono: ['"JetBrains Mono"', 'monospace'],
                     },
                     colors: {
-                        slatebg: {
-                            900: '#0b0f19', /* Deep Obsidian Slate */
-                            800: '#111827', /* Card Metallic Slate */
-                            700: '#1e293b', /* Border Silver Slate */
-                        },
-                        silver: {
-                            100: '#f8fafc',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                        },
-                        accent: {
-                            green: '#10b981', /* Mint Emerald */
-                            gold: '#f59e0b',  /* Amber Gold */
-                        }
+                        obsidian: '#070a12',
+                        amberGold: '#f59e0b',
+                        silverText: '#cbd5e1',
+                        subtleBorder: 'rgba(255, 255, 255, 0.12)',
                     }
                 }
             }
         }
     </script>
     <style>
-        .silver-grid {
-            background-image: radial-gradient(rgba(203, 213, 225, 0.07) 1px, transparent 0);
-            background-size: 32px 32px;
+        .grid-pattern {
+            background-image: radial-gradient(rgba(245, 158, 11, 0.08) 1px, transparent 0);
+            background-size: 36px 36px;
         }
-        .glow-effect {
-            box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.12);
+        .glow-box {
+            box-shadow: 0 0 30px -5px rgba(245, 158, 11, 0.1);
         }
     </style>
 </head>
-<body class="antialiased selection:bg-amber-400 selection:text-slate-950 min-h-screen flex flex-col justify-between bg-slatebg-900 text-silver-300 font-sans silver-grid">
+<body class="antialiased selection:bg-amberGold selection:text-obsidian min-h-screen flex flex-col justify-between bg-obsidian text-silverText font-sans grid-pattern">
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 bg-slatebg-900/95 backdrop-blur-xl border-b border-slatebg-700 w-full h-20">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-xl border-b border-subtleBorder w-full h-24">
         <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex justify-between items-center">
-            <a href="#hero" class="text-xl font-black tracking-widest text-white uppercase flex items-center gap-3 group">
-                <div class="w-3 h-3 rounded-full bg-accent-green animate-pulse"></div>
-                <span class="tracking-tighter font-extrabold text-xl text-white">[YOUR NAME]</span>
-                <span class="text-xs font-mono text-accent-gold font-bold border-l border-slatebg-700 pl-3 uppercase tracking-wider">NETRACE SEC</span>
+            
+            <a href="#hero" class="text-2xl font-black tracking-widest text-white uppercase flex items-center gap-3.5 group">
+                <!-- Yellow Status Marker -->
+                <div class="w-3 h-3 rounded-sm bg-amberGold"></div>
+                <span class="tracking-tighter font-extrabold text-2xl text-white">[YOUR NAME]</span>
+                <span class="text-xs font-mono text-amberGold font-bold border-l border-white/20 pl-3.5 uppercase tracking-widest">NETRACE SEC</span>
             </a>
 
             <!-- Navigation Links -->
-            <div class="hidden md:flex items-center space-x-8 text-xs font-mono tracking-widest uppercase text-silver-400 font-bold">
-                <a href="#about" class="hover:text-accent-gold transition py-1">About</a>
-                <a href="#matrix" class="hover:text-accent-green transition py-1">Capabilities</a>
-                <a href="#research" class="hover:text-accent-gold transition py-1">Research & Tooling</a>
-                <a href="#contact" class="px-5 py-2.5 border border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-slate-950 transition-all duration-300 font-bold tracking-widest rounded-xl shadow-[0_0_15px_rgba(245,158,11,0.15)]">Connect</a>
+            <div class="hidden md:flex items-center space-x-10 text-xs font-mono tracking-widest uppercase text-gray-300 font-bold">
+                <a href="#about" class="hover:text-amberGold transition py-1">About</a>
+                <a href="#capabilities" class="hover:text-amberGold transition py-1">Qualifications</a>
+                <a href="#research" class="hover:text-amberGold transition py-1">Work & Tools</a>
+                <a href="#contact" class="px-6 py-2.5 border border-amberGold text-amberGold hover:bg-amberGold hover:text-obsidian transition-all duration-300 font-bold tracking-widest rounded-xl glow-box">Connect</a>
             </div>
 
             <!-- Mobile Menu Toggle -->
-            <button id="menu-btn" class="md:hidden text-silver-300 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
-        </nav>
-
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slatebg-900 border-b border-slatebg-700 px-6 py-6 space-y-4 text-xs font-mono tracking-widest uppercase font-bold">
-            <a href="#about" class="block text-silver-300 hover:text-accent-gold">About</a>
-            <a href="#matrix" class="block text-silver-300 hover:text-accent-green">Capabilities</a>
-            <a href="#research" class="block text-silver-300 hover:text-accent-gold">Research & Tooling</a>
-            <a href="#contact" class="block text-center py-2.5 border border-accent-gold text-accent-gold rounded-xl font-bold">Connect</a>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="flex-grow">
-        
-        <!-- Hero Section -->
-        <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 lg:px-8 border-b border-slatebg-700 overflow-hidden">
-            <!-- Subtle Silver & Gold Glows -->
-            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-silver-300/10 via-accent-gold/5 to-transparent blur-[160px] pointer-events-none"></div>
-
-            <div class="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 py-16">
-                
-                <!-- Left Column: Intro -->
-                <div class="lg:col-span-7 space-y-8">
-                    <div class="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full border border-accent-green/30 bg-accent-green/10 text-xs font-mono text-accent-green font-bold uppercase tracking-widest">
-                        <span class="w-2 h-2 rounded-full bg-accent-green animate-ping"></span>
-                        <span>Open for Professional Security Roles</span>
-                    </div>
-
-                    <div class="space-y-4">
-                        <h1 class="text-5xl sm:text-7xl font-black text-silver-100 tracking-tight uppercase leading-none">
-                            [Your Name]
-                        </h1>
-                        <p class="text-lg font-mono text-accent-gold font-bold uppercase tracking-wider">
-                            // NETRACE SEC &bull; OFFENSIVE SECURITY & APPSEC
-                        </p>
-                        <p class="text-xl text-silver-300 font-normal max-w-xl leading-relaxed">
-                            Specializing in application logic exploitation, vulnerability research, and custom security automation suites.
-                        </p>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-wrap gap-4 items-center pt-2">
-                        <a href="#contact" class="px-8 py-3.5 bg-silver-100 text-slatebg-900 font-bold text-xs uppercase tracking-widest hover:bg-accent-gold transition-all duration-300 rounded-xl shadow-lg">
-                            Initiate Outreach
-                        </a>
-                        <a href="#research" class="px-8 py-3.5 border border-slatebg-700 text-silver-100 font-bold text-xs uppercase tracking-widest hover:border-accent-green hover:text-accent-green transition-all duration-300 rounded-xl">
-                            View Proof of Work
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Column: Interactive Terminal Preview -->
-                <div class="lg:col-span-5 border border-slatebg-700 bg-slatebg-800 rounded-2xl overflow-hidden shadow-2xl glow-effect font-mono text-xs">
-                    <div class="bg-slatebg-900 px-4 py-3 border-b border-slatebg-700 flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-                            <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                            <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                        </div>
-                        <span class="text-silver-400 font-bold text-[10px]">netrace@sec-terminal:~</span>
-                    </div>
-                    <div class="p-5 space-y-3">
-                        <div>
-                            <span class="text-accent-gold">$</span> <span class="text-white">whoami</span>
-                            <p class="text-silver-400 mt-1">&gt; [Your Name] — Security Researcher & Pentester</p>
-                        </div>
-                        <div>
-                            <span class="text-accent-gold">$</span> <span class="text-white">cat credentials.txt</span>
-                            <p class="text-accent-green mt-1">&gt; OSCP (Verified), Security+, HTB Top 1%</p>
-                        </div>
-                        <div>
-                            <span class="text-accent-gold">$</span> <span class="text-white">netrace --status</span>
-                            <p class="text-silver-300 mt-1">&gt; Available for full-time security engagements.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-b border-slatebg-700">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-span-4 space-y-2">
-                    <span class="text-xs font-mono text-accent-gold uppercase tracking-widest font-bold">// Profile</span>
-                    <h2 class="text-3xl font-black text-silver-100 uppercase tracking-tight">Adversarial Mindset</h2>
-                </div>
-                <div class="lg:col-span-8 space-y-6 text-silver-300 text-base sm:text-lg leading-relaxed">
-                    <p>
-                        Operating under <strong class="text-white">Netrace Security</strong>, I systematically test and secure web infrastructure, authentication mechanisms, and business logic against real-world attack vectors.
-                    </p>
-                    <p>
-                        My work blends manual exploitation expertise with custom Python automation tools designed to surface complex flaws before malicious actors can exploit them.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Capability Matrix -->
-        <section id="matrix" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-b border-slatebg-700 space-y-12">
-            <div class="space-y-2">
-                <span class="text-xs font-mono text-accent-green uppercase tracking-widest font-bold">// Qualifications</span>
-                <h2 class="text-3xl font-black text-silver-100 uppercase tracking-tight">Capabilities & Credentials</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 font-mono">
-                <!-- Certifications Card -->
-                <div class="p-8 border border-slatebg-700 bg-slatebg-800 space-y-6 rounded-3xl shadow-xl">
-                    <span class="text-xs text-accent-gold uppercase font-bold tracking-widest">[ CERTIFICATIONS ]</span>
-                    <div class="space-y-4 text-xs">
-                        <div class="border-b border-slatebg-700 pb-3">
-                            <div class="text-white font-bold">OSCP</div>
-                            <div class="text-silver-400 mt-1">OffSec Certified Professional</div>
-                            <span class="inline-block text-accent-green font-bold text-[10px] mt-2 px-2 py-0.5 border border-accent-green/30 bg-accent-green/10 rounded">VERIFIED</span>
-                        </div>
-                        <div class="border-b border-slatebg-700 pb-3">
-                            <div class="text-white font-bold">CompTIA Security+</div>
-                            <div class="text-silver-400 mt-1">Core Security Infrastructure</div>
-                            <span class="inline-block text-accent-green font-bold text-[10px] mt-2 px-2 py-0.5 border border-accent-green/30 bg-accent-green/10 rounded">VERIFIED</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Platform Ranks -->
-                <div class="p-8 border border-slatebg-700 bg-slatebg-800 space-y-6 rounded-3xl shadow-xl">
-                    <span class="text-xs text-accent-green uppercase font-bold tracking-widest">[ LAB STANDINGS ]</span>
-                    <div class="space-y-4 text-xs">
-                        <div class="border-b border-slatebg-700 pb-3">
-                            <div class="text-white font-bold">TryHackMe</div>
-                            <div class="text-silver-400 mt-1">Top 1% Global Ranking</div>
-                        </div>
-                        <div class="border-b border-slatebg-700 pb-3">
-                            <div class="text-white font-bold">HackTheBox</div>
-                            <div class="text-silver-400 mt-1">Pro Labs & Custom Machine Writeups</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Technical Toolset -->
-                <div class="p-8 border border-slatebg-700 bg-slatebg-800 space-y-6 rounded-3xl shadow-xl">
-                    <span class="text-xs text-silver-100 uppercase font-bold tracking-widest">[ TECHNICAL STACK ]</span>
-                    <div class="flex flex-wrap gap-2 text-xs font-bold">
-                        <span class="px-3 py-1.5 border border-slatebg-700 text-silver-300 bg-slatebg-900 rounded-lg">Linux / Kali</span>
-                        <span class="px-3 py-1.5 border border-slatebg-700 text-silver-300 bg-slatebg-900 rounded-lg">Python 3</span>
-                        <span class="px-3 py-1.5 border border-slatebg-700 text-silver-300 bg-slatebg-900 rounded-lg">Burp Suite Pro</span>
-                        <span class="px-3 py-1.5 border border-slatebg-700 text-silver-300 bg-slatebg-900 rounded-lg">Bash Automation</span>
-                        <span class="px-3 py-1.5 border border-slatebg-700 text-silver-300 bg-slatebg-900 rounded-lg">Nmap / Recon</span>
-                        <span class="px-3 py-1.5 border border-slatebg-700 text-silver-300 bg-slatebg-900 rounded-lg">AppSec Logic</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research & Tooling Section -->
-        <section id="research" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-b border-slatebg-700 space-y-12">
-            <div class="space-y-2">
-                <span class="text-xs font-mono text-accent-gold uppercase tracking-widest font-bold">// Proof of Work</span>
-                <h2 class="text-3xl font-black text-silver-100 uppercase tracking-tight">Research & Open Source</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- VDP Card -->
-                <div class="p-8 border border-slatebg-700 bg-slatebg-800 space-y-4 rounded-3xl hover:border-accent-gold/50 transition duration-300">
-                    <span class="text-xs font-mono text-accent-gold font-bold">[ DISCLOSURES ]</span>
-                    <h3 class="text-xl font-bold text-silver-100 uppercase">Vulnerability Submissions & CVEs</h3>
-                    <p classHere is a **complete ground-up overhaul** of your page. 
-
-To achieve that **cool, high-end "light terminal" look without blinding anyone**, we use a **cool slate/silver canvas (`#f1f5f9` to `#e2e8f0`)** paired with dark charcoal UI elements (`#0f172a`), emerald green status indicators, and amber yellow callouts. It feels fresh, premium, ultra-modern, and easy on the eyes.
-
-We brought **Netrace Sec** back front-and-center—framed not as a corporate agency, but as your **personal security identity, research lab, and brand**.
-
----
-
-### What's New in This Redesign:
-1. **Cool Silver Palette:** A soft, matte silver-slate background (`bg-slate-100`) that feels high-tech and sleek without harsh white glare.
-2. **Bold Modern Layout:** Dynamic grid structures, high-contrast cards, and oversized typography for a massive "wow" factor.
-3. **Netrace Sec Identity:** Integrated as your technical handle / security lab name (`[Your Name] // NETRACE SEC`).
-4. **Recruiter-Centric Details:** Highlighting your core skills, certifications (OSCP, Sec+), top platform ranks (THM/HTB), and CVE research right up front.
-
----
-
-### The Complete New Code
-
-```html
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Real Name] | Netrace Sec — Offensive Security & AppSec</title>
-    
-    <!-- Premium Google Fonts -->
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap](https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap)" rel="stylesheet">
-    
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace'],
-                    },
-                    colors: {
-                        silver: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                        },
-                        obsidian: '#0b0f17',
-                        accent: {
-                            green: '#059669',  /* Professional Emerald */
-                            amber: '#d97706',  /* Deep Amber Yellow */
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .dot-pattern {
-            background-image: radial-gradient(rgba(15, 23, 42, 0.12) 1.5px, transparent 0);
-            background-size: 28px 28px;
-        }
-        .silver-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(15, 23, 42, 0.08);
-        }
-        .silver-card:hover {
-            border-color: rgba(15, 23, 42, 0.25);
-            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
-        }
-    </style>
-</head>
-<body class="antialiased selection:bg-amber-400 selection:text-obsidian min-h-screen flex flex-col justify-between bg-silver-100 text-slate-800 font-sans dot-pattern">
-
-    <!-- Sticky Navigation Header -->
-    <header class="sticky top-0 z-50 bg-silver-100/80 backdrop-blur-md border-b border-slate-300/60 w-full h-20">
-        <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex justify-between items-center">
-            
-            <!-- Brand / Logo -->
-            <a href="#hero" class="text-xl font-black tracking-tight text-obsidian uppercase flex items-center gap-3 group">
-                <div class="w-3.5 h-3.5 rounded-full bg-accent-green animate-pulse"></div>
-                <span class="tracking-tighter font-extrabold text-2xl">[YOUR NAME]</span>
-                <span class="text-xs font-mono text-amber-700 bg-amber-100/80 font-bold px-2.5 py-1 rounded-md border border-amber-300/60">NETRACE SEC</span>
-            </a>
-
-            <!-- Navigation Links -->
-            <div class="hidden md:flex items-center space-x-8 text-xs font-mono tracking-widest uppercase text-slate-700 font-bold">
-                <a href="#about" class="hover:text-amber-600 transition py-1">About</a>
-                <a href="#capabilities" class="hover:text-accent-green transition py-1">Capabilities</a>
-                <a href="#research" class="hover:text-amber-600 transition py-1">Research & Tools</a>
-                <a href="#contact" class="px-5 py-2.5 bg-obsidian text-white hover:bg-amber-500 hover:text-obsidian transition-all duration-300 font-bold tracking-widest rounded-xl shadow-md">Hire Me</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-obsidian p-2 focus:outline-none" aria-label="Toggle Menu">
+            <button id="menu-btn" class="md:hidden text-gray-200 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </nav>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-silver-100 border-b border-slate-300 px-6 py-6 space-y-4 text-xs font-mono tracking-widest uppercase font-bold">
-            <a href="#about" class="block text-slate-800 hover:text-amber-600">About</a>
-            <a href="#capabilities" class="block text-slate-800 hover:text-accent-green">Capabilities</a>
-            <a href="#research" class="block text-slate-800 hover:text-amber-600">Research & Tools</a>
-            <a href="#contact" class="block text-center py-3 bg-obsidian text-white rounded-xl font-bold">Hire Me</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-obsidian border-b border-subtleBorder px-8 py-8 space-y-5 text-sm font-mono tracking-widest uppercase font-bold">
+            <a href="#about" class="block text-gray-200 hover:text-amberGold">About</a>
+            <a href="#capabilities" class="block text-gray-200 hover:text-amberGold">Qualifications</a>
+            <a href="#research" class="block text-gray-200 hover:text-amberGold">Work & Tools</a>
+            <a href="#contact" class="block text-center py-3 border border-amberGold text-amberGold rounded-xl font-bold mt-4">Connect</a>
         </div>
     </header>
 
@@ -351,154 +79,151 @@ We brought **Netrace Sec** back front-and-center—framed not as a corporate age
     <main class="flex-grow">
         
         <!-- Hero Section -->
-        <section id="hero" class="relative min-h-[82vh] flex items-center justify-center px-6 lg:px-8 border-b border-slate-300/60 overflow-hidden">
-            <div class="max-w-6xl w-full mx-auto space-y-8 py-16 relative z-10">
+        <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 lg:px-8 border-b border-subtleBorder overflow-hidden">
+            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-amberGold/15 via-amberGold/5 to-transparent blur-[160px] pointer-events-none"></div>
+
+            <div class="max-w-6xl w-full mx-auto space-y-10 relative z-10 py-20">
                 
-                <!-- Availability Badge -->
-                <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-emerald-600/30 bg-emerald-50 text-xs font-mono text-accent-green font-bold uppercase tracking-widest shadow-sm">
-                    <span class="w-2.5 h-2.5 rounded-full bg-accent-green animate-ping"></span>
-                    <span>Available for Full-Time Security Roles</span>
+                <!-- Yellow Professional Status Pill -->
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl border border-amberGold/40 bg-amberGold/10 text-xs font-mono text-amberGold font-bold uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-amberGold"></span>
+                    <span>Available for Full-Time Cybersecurity Positions</span>
                 </div>
 
-                <!-- Main Hero Headline -->
-                <div class="space-y-4">
-                    <h1 class="text-6xl sm:text-8xl lg:text-9xl font-black text-obsidian tracking-tight leading-none uppercase">
+                <div class="space-y-6">
+                    <h1 class="text-6xl sm:text-8xl lg:text-9xl font-black text-white tracking-tight leading-none uppercase">
                         [Your Name]
                     </h1>
-                    <p class="text-2xl sm:text-3xl text-slate-700 font-semibold max-w-4xl tracking-tight leading-snug">
-                        Offensive Security Engineer & Application Security Researcher operating under <span class="text-amber-700 font-mono font-bold bg-amber-100/80 px-2 py-0.5 rounded">Netrace Sec</span>.
+                    <p class="text-2xl sm:text-3xl text-gray-200 font-medium max-w-4xl tracking-tight leading-relaxed">
+                        Ethical hacking, application security testing, and building automated security tools under <span class="text-amberGold font-mono font-bold">Netrace Sec</span>.
                     </p>
                 </div>
 
-                <!-- Key Stat Cards -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 font-mono text-xs">
-                    <div class="p-5 silver-card rounded-2xl space-y-1">
-                        <span class="text-amber-700 uppercase font-extrabold">// Focus</span>
-                        <p class="text-obsidian font-bold text-base">AppSec & Logic Flaws</p>
+                <!-- Spec Cards -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-5 pt-8 border-t border-subtleBorder font-mono text-xs">
+                    <div class="space-y-2 p-5 border border-subtleBorder bg-white/[0.02] rounded-2xl">
+                        <span class="text-amberGold uppercase block font-bold">// Main Focus</span>
+                        <span class="text-white font-bold text-base">Web & App Security</span>
                     </div>
-                    <div class="p-5 silver-card rounded-2xl space-y-1">
-                        <span class="text-accent-green uppercase font-extrabold">// Credentials</span>
-                        <p class="text-obsidian font-bold text-base">OSCP, Security+</p>
+                    <div class="space-y-2 p-5 border border-subtleBorder bg-white/[0.02] rounded-2xl">
+                        <span class="text-amberGold uppercase block font-bold">// Certifications</span>
+                        <span class="text-white font-bold text-base">OSCP, Security+</span>
                     </div>
-                    <div class="p-5 silver-card rounded-2xl space-y-1">
-                        <span class="text-amber-700 uppercase font-extrabold">// Rankings</span>
-                        <p class="text-obsidian font-bold text-base">THM Top 1% / HTB</p>
+                    <div class="space-y-2 p-5 border border-subtleBorder bg-white/[0.02] rounded-2xl">
+                        <span class="text-amberGold uppercase block font-bold">// Practice Labs</span>
+                        <span class="text-white font-bold text-base">THM Top 1% / HTB</span>
                     </div>
-                    <div class="p-5 silver-card rounded-2xl space-y-1">
-                        <span class="text-accent-green uppercase font-extrabold">// Research</span>
-                        <p class="text-obsidian font-bold text-base">CVEs & VDP Track</p>
+                    <div class="space-y-2 p-5 border border-subtleBorder bg-white/[0.02] rounded-2xl">
+                        <span class="text-amberGold uppercase block font-bold">// Bug Reports</span>
+                        <span class="text-white font-bold text-base">CVEs & Findings</span>
                     </div>
                 </div>
 
-                <!-- Call To Actions -->
-                <div class="pt-4 flex flex-wrap gap-4 items-center">
-                    <a href="#contact" class="px-8 py-4 bg-obsidian text-white font-bold text-xs uppercase tracking-widest hover:bg-amber-500 hover:text-obsidian transition-all duration-300 rounded-xl shadow-lg">
-                        Initiate Connection
+                <div class="pt-4 flex gap-5">
+                    <a href="#contact" class="px-9 py-4 bg-amberGold text-obsidian font-bold text-xs uppercase tracking-widest hover:bg-white transition-all duration-300 rounded-xl shadow-[0_0_20px_rgba(245,158,11,0.2)]">
+                        Get In Touch
                     </a>
-                    <a href="#research" class="px-8 py-4 border-2 border-slate-400/80 text-obsidian font-bold text-xs uppercase tracking-widest hover:border-obsidian hover:bg-white transition-all duration-300 rounded-xl">
-                        View Proof of Work
+                    <a href="#research" class="px-9 py-4 border border-white/20 text-white font-bold text-xs uppercase tracking-widest hover:border-amberGold hover:text-amberGold transition-all duration-300 rounded-xl">
+                        View Work
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- About / Focus Section -->
-        <section id="about" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-b border-slate-300/60">
+        <!-- Overview Section -->
+        <section id="about" class="py-28 max-w-7xl mx-auto px-6 lg:px-8 border-b border-subtleBorder">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-span-4 space-y-2">
-                    <span class="text-xs font-mono text-amber-700 uppercase tracking-widest font-bold">// Methodology</span>
-                    <h2 class="text-4xl font-black text-obsidian uppercase tracking-tight">Adversarial Engineering</h2>
+                <div class="lg:col-span-4 space-y-3">
+                    <span class="text-xs font-mono text-amberGold uppercase tracking-widest font-bold">// Professional Background</span>
+                    <h2 class="text-4xl font-black text-white uppercase tracking-tight">How I Work</h2>
                 </div>
-                <div class="lg:col-span-8 space-y-6 text-slate-700 text-lg leading-relaxed font-medium">
+                <div class="lg:col-span-8 space-y-6 text-gray-200 text-lg sm:text-xl leading-relaxed font-normal">
                     <p>
-                        I focus on identifying, breaking down, and securing critical business logic vulnerabilities across modern web architectures, authentication protocols, and access control models.
+                        I focus on finding security flaws in web applications, logins, and access controls before malicious hackers can exploit them.
                     </p>
                     <p>
-                        Operating as <strong class="text-obsidian">Netrace Sec</strong>, my practical work combines hands-on adversary simulation, custom proof-of-concept exploit automation, and structured vulnerability disclosures across bug bounty targets and active lab environments.
+                        My work combines hands-on penetration testing, writing custom tools to automate testing, and reporting findings clearly so teams can fix them quickly.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Capabilities & Stack -->
-        <section id="capabilities" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-b border-slate-300/60 space-y-12">
-            <div class="space-y-2">
-                <span class="text-xs font-mono text-accent-green uppercase tracking-widest font-bold">// Qualifications</span>
-                <h2 class="text-4xl font-black text-obsidian uppercase tracking-tight">Capabilities & Stack</h2>
+        <!-- Qualifications & Tools -->
+        <section id="capabilities" class="py-28 max-w-7xl mx-auto px-6 lg:px-8 border-b border-subtleBorder space-y-12">
+            <div class="space-y-3">
+                <span class="text-xs font-mono text-amberGold uppercase tracking-widest font-bold">// Qualifications</span>
+                <h2 class="text-4xl font-black text-white uppercase tracking-tight">Skills & Certifications</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Certifications Card -->
-                <div class="p-8 silver-card rounded-3xl space-y-6 shadow-sm">
-                    <span class="text-xs font-mono text-slate-500 uppercase font-extrabold tracking-widest">[ CERTIFICATIONS & ACADEMICS ]</span>
+                <!-- Certs -->
+                <div class="p-8 border border-subtleBorder bg-[#0c101d] space-y-6 rounded-3xl shadow-lg">
+                    <span class="text-xs font-mono text-amberGold uppercase block font-bold tracking-widest">[ CERTIFICATIONS ]</span>
                     <div class="space-y-4 font-mono text-sm">
-                        <div class="flex justify-between items-center py-3 border-b border-slate-200">
+                        <div class="flex justify-between items-center py-3 border-b border-white/10">
                             <div>
-                                <div class="text-obsidian font-bold">OSCP (OffSec Certified Professional)</div>
-                                <div class="text-xs text-slate-500 mt-0.5">Penetration Testing & Practical Exploitation</div>
+                                <div class="text-white font-bold text-base">OSCP (OffSec Certified Professional)</div>
+                                <div class="text-xs text-gray-400 mt-1">Practical Penetration Testing</div>
                             </div>
-                            <span class="text-emerald-700 text-xs font-bold px-2.5 py-1 bg-emerald-100 border border-emerald-300 rounded-lg">VERIFIED</span>
+                            <span class="text-amberGold text-xs font-bold px-3 py-1 border border-amberGold/40 bg-amberGold/10 rounded-lg shrink-0">VERIFIED</span>
                         </div>
-                        <div class="flex justify-between items-center py-3 border-b border-slate-200">
+                        <div class="flex justify-between items-center py-3 border-b border-white/10">
                             <div>
-                                <div class="text-obsidian font-bold">CompTIA Security+</div>
-                                <div class="text-xs text-slate-500 mt-0.5">Enterprise Risk & Core Security Principles</div>
+                                <div class="text-white font-bold text-base">CompTIA Security+</div>
+                                <div class="text-xs text-gray-400 mt-1">Core IT & Enterprise Security</div>
                             </div>
-                            <span class="text-emerald-700 text-xs font-bold px-2.5 py-1 bg-emerald-100 border border-emerald-300 rounded-lg">VERIFIED</span>
+                            <span class="text-amberGold text-xs font-bold px-3 py-1 border border-amberGold/40 bg-amberGold/10 rounded-lg shrink-0">VERIFIED</span>
                         </div>
                         <div class="flex justify-between items-center py-3">
                             <div>
-                                <div class="text-obsidian font-bold">TryHackMe / HackTheBox Ranks</div>
-                                <div class="text-xs text-slate-500 mt-0.5">Active Machine Exploitation & Writeups</div>
+                                <div class="text-white font-bold text-base">Hands-on Security Platforms</div>
+                                <div class="text-xs text-gray-400 mt-1">TryHackMe Top 1% & HackTheBox Labs</div>
                             </div>
-                            <span class="text-amber-800 text-xs font-bold px-2.5 py-1 bg-amber-100 border border-amber-300 rounded-lg">TOP 1%</span>
+                            <span class="text-amberGold text-xs font-bold px-3 py-1 border border-amberGold/40 bg-amberGold/10 rounded-lg shrink-0">TOP RANKED</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Technical Toolset Card -->
-                <div class="p-8 silver-card rounded-3xl space-y-6 shadow-sm">
-                    <span class="text-xs font-mono text-slate-500 uppercase font-extrabold tracking-widest">[ TECHNICAL TOOLSET ]</span>
-                    <div class="flex flex-wrap gap-2.5 font-mono text-xs font-bold">
-                        <span class="px-3.5 py-2.5 bg-white border border-slate-300 text-obsidian rounded-xl shadow-sm">Linux / Kali</span>
-                        <span class="px-3.5 py-2.5 bg-white border border-slate-300 text-obsidian rounded-xl shadow-sm">Python 3 Automation</span>
-                        <span class="px-3.5 py-2.5 bg-white border border-slate-300 text-obsidian rounded-xl shadow-sm">Bash Scripting</span>
-                        <span class="px-3.5 py-2.5 bg-white border border-slate-300 text-obsidian rounded-xl shadow-sm">Burp Suite Pro</span>
-                        <span class="px-3.5 py-2.5 bg-white border border-slate-300 text-obsidian rounded-xl shadow-sm">Nmap Recon</span>
-                        <span class="px-3.5 py-2.5 bg-white border border-slate-300 text-obsidian rounded-xl shadow-sm">Wireshark Traffic</span>
-                        <span class="px-3.5 py-2.5 bg-white border border-slate-300 text-obsidian rounded-xl shadow-sm">AppSec & Business Logic</span>
-                        <span class="px-3.5 py-2.5 bg-white border border-slate-300 text-obsidian rounded-xl shadow-sm">Git & CI/CD Audit</span>
+                <!-- Toolset -->
+                <div class="p-8 border border-subtleBorder bg-[#0c101d] space-y-6 rounded-3xl shadow-lg">
+                    <span class="text-xs font-mono text-amberGold uppercase block font-bold tracking-widest">[ TECHNICAL TOOLSET ]</span>
+                    <div class="flex flex-wrap gap-3 font-mono text-xs font-bold">
+                        <span class="px-4 py-2.5 border border-white/15 text-white bg-white/[0.02] rounded-xl">Linux / Kali</span>
+                        <span class="px-4 py-2.5 border border-white/15 text-white bg-white/[0.02] rounded-xl">Python 3 Scripting</span>
+                        <span class="px-4 py-2.5 border border-white/15 text-white bg-white/[0.02] rounded-xl">Bash Automation</span>
+                        <span class="px-4 py-2.5 border border-white/15 text-white bg-white/[0.02] rounded-xl">Burp Suite Pro</span>
+                        <span class="px-4 py-2.5 border border-white/15 text-white bg-white/[0.02] rounded-xl">Network Analysis</span>
+                        <span class="px-4 py-2.5 border border-white/15 text-white bg-white/[0.02] rounded-xl">Port Scanning (Nmap)</span>
+                        <span class="px-4 py-2.5 border border-white/15 text-white bg-white/[0.02] rounded-xl">Web Application Security</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Research & Tooling Section -->
-        <section id="research" class="py-24 max-w-7xl mx-auto px-6 lg:px-8 border-b border-slate-300/60 space-y-12">
-            <div class="space-y-2">
-                <span class="text-xs font-mono text-amber-700 uppercase tracking-widest font-bold">// Proof of Work</span>
-                <h2 class="text-4xl font-black text-obsidian uppercase tracking-tight">Research & Open Source</h2>
+        <!-- Work & Tools Section -->
+        <section id="research" class="py-28 max-w-7xl mx-auto px-6 lg:px-8 border-b border-subtleBorder space-y-12">
+            <div class="space-y-3">
+                <span class="text-xs font-mono text-amberGold uppercase tracking-widest font-bold">// Proof of Work</span>
+                <h2 class="text-4xl font-black text-white uppercase tracking-tight">Security Projects</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Disclosures Card -->
-                <div class="p-8 silver-card rounded-3xl space-y-4 transition duration-300">
-                    <span class="text-xs font-mono text-amber-700 font-bold uppercase tracking-wider">[ DISCLOSURES & VDP ]</span>
-                    <h3 class="text-2xl font-bold text-obsidian uppercase">CVEs & Vulnerability Research</h3>
-                    <p class="text-slate-700 leading-relaxed font-medium text-sm">
-                        Responsible identification and reporting of broken authentication flows, IDOR, privilege escalation, and business logic flaws across public targets.
+                <div class="p-8 border border-subtleBorder bg-[#0c101d] space-y-5 rounded-3xl">
+                    <span class="text-xs font-mono text-amberGold uppercase font-bold">[ BUG REPORTS & CVES ]</span>
+                    <h3 class="text-2xl font-bold text-white uppercase">Vulnerability Reports</h3>
+                    <p class="text-base text-gray-300 leading-relaxed font-normal">
+                        Responsible security research finding flaws like broken access controls, bypassed logins, and data exposure in real-world systems.
                     </p>
                 </div>
 
-                <!-- Custom Security Tools Card -->
-                <div class="p-8 silver-card rounded-3xl space-y-4 transition duration-300">
-                    <span class="text-xs font-mono text-accent-green font-bold uppercase tracking-wider">[ OPEN SOURCE TOOLING ]</span>
-                    <h3 class="text-2xl font-bold text-obsidian uppercase">Recon & Automation Suite</h3>
-                    <p class="text-slate-700 leading-relaxed font-medium text-sm">
-                        Custom multi-threaded Python and Bash utilities built for fast target triage, automated asset discovery, and exploit validation.
+                <div class="p-8 border border-subtleBorder bg-[#0c101d] space-y-5 rounded-3xl">
+                    <span class="text-xs font-mono text-amberGold uppercase font-bold">[ SOFTWARE DEVELOPMENT ]</span>
+                    <h3 class="text-2xl font-bold text-white uppercase">Custom Security Tools</h3>
+                    <p class="text-base text-gray-300 leading-relaxed font-normal">
+                        Open-source Python scripts created to speed up security testing, log checking, and asset discovery during engagements.
                     </p>
-                    <a href="[https://github.com/NetraceSec](https://github.com/NetraceSec)" target="_blank" class="inline-flex items-center gap-2 text-xs font-mono text-obsidian font-bold uppercase hover:text-amber-600 transition pt-2">
-                        <span>Explore NetraceSec Repositories</span>
+                    <a href="https://github.com/NetraceSec" target="_blank" class="inline-flex items-center gap-3 text-xs font-mono text-amberGold font-bold uppercase tracking-widest hover:underline pt-2">
+                        <span>View Code on GitHub</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
@@ -506,28 +231,30 @@ We brought **Netrace Sec** back front-and-center—framed not as a corporate age
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="bg-slate-200/60 py-24 border-t border-slate-300/80 relative overflow-hidden">
+        <section id="contact" class="bg-[#03050a] border-t border-subtleBorder py-28 relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 space-y-4">
-                    <span class="text-xs font-mono text-accent-green uppercase tracking-widest font-bold">// Direct Connection</span>
-                    <h2 class="text-4xl sm:text-5xl font-black text-obsidian uppercase tracking-tight">Let's Connect</h2>
-                    <p class="text-slate-700 text-lg font-medium leading-relaxed max-w-lg">
-                        I am currently open to full-time cybersecurity roles, technical collaborations, and vulnerability research inquiries.
+                <div class="lg:col-span-6 space-y-5">
+                    <span class="text-xs font-mono text-amberGold uppercase tracking-widest font-bold">// Get in Touch</span>
+                    <h2 class="text-4xl sm:text-5xl font-black text-white uppercase tracking-tight">Direct Contact</h2>
+                    <p class="text-gray-300 text-xl font-normal leading-relaxed max-w-xl">
+                        Open to discussing full-time roles in penetration testing, security analysis, or application security engineering.
                     </p>
                 </div>
 
-                <div class="lg:col-span-6 p-8 bg-white border border-slate-300 shadow-xl space-y-5 font-mono text-sm rounded-3xl">
-                    <div class="flex justify-between items-center py-3 border-b border-slate-200">
-                        <span class="text-slate-500 font-medium">Direct Email</span>
-                        <span id="email-box" class="text-amber-700 font-bold">Loading...</span>
-                    </div>
-                    <div class="flex justify-between items-center py-3 border-b border-slate-200">
-                        <span class="text-slate-500 font-medium">GitHub Repository</span>
-                        <a href="[https://github.com/NetraceSec](https://github.com/NetraceSec)" target="_blank" class="text-obsidian font-bold hover:underline">NetraceSec</a>
-                    </div>
-                    <div class="flex justify-between items-center py-3">
-                        <span class="text-slate-500 font-medium">Status</span>
-                        <span class="text-emerald-800 font-bold text-xs uppercase px-3 py-1 bg-emerald-100 border border-emerald-300 rounded-lg">Available for Roles</span>
+                <div class="lg:col-span-6 p-8 border border-subtleBorder bg-[#080c16] shadow-2xl space-y-6 font-mono text-sm rounded-3xl">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-white/10">
+                            <span class="text-gray-400 font-medium">Direct Email</span>
+                            <span id="email-box" class="text-amberGold font-bold">Loading...</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-white/10">
+                            <span class="text-gray-400 font-medium">GitHub</span>
+                            <a href="https://github.com/NetraceSec" target="_blank" class="text-amberGold font-bold hover:underline">NetraceSec</a>
+                        </div>
+                        <div class="flex justify-between items-center py-3">
+                            <span class="text-gray-400 font-medium">Status</span>
+                            <span class="text-amberGold font-bold text-xs uppercase px-3 py-1 border border-amberGold/40 bg-amberGold/10 rounded-lg">Available for Hiring</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -535,9 +262,11 @@ We brought **Netrace Sec** back front-and-center—framed not as a corporate age
     </main>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-slate-300 bg-slate-200 w-full font-mono text-xs text-slate-600">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="font-bold tracking-wider">[YOUR REAL NAME] &bull; NETRACE SEC</div>
+    <footer class="py-10 border-t border-subtleBorder bg-[#03050a] w-full font-mono text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="font-bold tracking-wider">
+                [YOUR REAL NAME] <span class="text-amberGold">/ NETRACE SEC</span>
+            </div>
             <div>&copy; 2026. All rights reserved.</div>
         </div>
     </footer>
