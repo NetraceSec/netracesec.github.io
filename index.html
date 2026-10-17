@@ -25,7 +25,7 @@
                     colors: {
                         obsidian: '#0b0f17',     /* Dark Text & Contrast Elements */
                         amberGold: '#d97706',    /* Rich Amber Yellow Accent */
-                        amberDarkGold: '#d97706',/* Vibrant Gold Accent */
+                        amberDarkGold: '#b45309',/* Slightly Darker Flaky Gold for Nav Links */
                         subtleBorder: '#cbd5e1',  /* Soft Silver/Slate Border */
                         silverBg: '#e2e8f0',      /* Soft Anti-Glare Slate Canvas */
                         silverCard: '#ffffff',    /* Clean White Premium Card Surface */
@@ -47,39 +47,39 @@
 </head>
 <body class="antialiased selection:bg-amber-400 selection:text-obsidian min-h-screen flex flex-col justify-between bg-silverBg text-slate-800 font-sans dot-pattern pb-8">
 
-    <!-- Sleek Obsidian Dark Accent Header (Distinct & Balanced) -->
-    <header class="sticky top-0 z-50 bg-obsidian/95 backdrop-blur-xl border-b-2 border-amberGold/30 w-full h-20 shadow-xl">
+    <!-- Header Navigation (Subtle Silver Backdrop & Border Accent) -->
+    <header class="sticky top-0 z-50 bg-slate-300/40 backdrop-blur-xl border-b border-slate-300/90 w-full h-24">
         <nav class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex justify-between items-center">
 
             <!-- Logo Branding -->
-            <a href="#hero" class="text-2xl font-black tracking-widest text-white uppercase flex items-center gap-3 group">
+            <a href="#hero" class="text-2xl font-black tracking-widest text-obsidian uppercase flex items-center gap-3 group">
                 <!-- Plus Icon Accent -->
                 <span class="text-2xl font-black text-amberGold leading-none select-none">+</span>
-                <span class="tracking-tighter font-extrabold text-2xl text-white"><span class="text-amberGold">[</span>Your Name<span class="text-amberGold">]</span></span>
+                <span class="tracking-tighter font-extrabold text-2xl text-obsidian"><span class="text-amberGold">[</span>Your Name<span class="text-amberGold">]</span></span>
                 <!-- Cold, Borderless Tag -->
-                <span class="text-xs font-mono text-slate-400 font-extrabold uppercase tracking-widest pl-1">NETRACE SECURITY</span>
+                <span class="text-xs font-mono text-slate-600 font-extrabold uppercase tracking-widest pl-1">NETRACE SECURITY</span>
             </a>
 
             <!-- Navigation Links -->
-            <div class="hidden md:flex items-center space-x-10 text-xs font-mono tracking-widest uppercase text-slate-300 font-extrabold">
-                <a href="#about" class="hover:text-amberGold transition py-1">About</a>
-                <a href="#capabilities" class="hover:text-amberGold transition py-1">Qualifications</a>
-                <a href="#research" class="hover:text-amberGold transition py-1">Work & Tools</a>
-                <a href="#contact" class="px-6 py-2.5 bg-amberGold text-obsidian hover:bg-white hover:text-obsidian transition-all duration-300 font-bold tracking-widest rounded-xl shadow-md">Connect</a>
+            <div class="hidden md:flex items-center space-x-10 text-xs font-mono tracking-widest uppercase text-amberDarkGold font-extrabold">
+                <a href="#about" class="hover:text-obsidian transition py-1">About</a>
+                <a href="#capabilities" class="hover:text-obsidian transition py-1">Qualifications</a>
+                <a href="#research" class="hover:text-obsidian transition py-1">Work & Tools</a>
+                <a href="#contact" class="px-6 py-2.5 bg-obsidian text-white hover:bg-amberGold hover:text-obsidian transition-all duration-300 font-bold tracking-widest rounded-xl shadow-md">Connect</a>
             </div>
 
             <!-- Mobile Menu Toggle -->
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none p-2" aria-label="Toggle Menu">
+            <button id="menu-btn" class="md:hidden text-obsidian focus:outline-none p-2" aria-label="Toggle Menu">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-obsidian border-b border-amberGold/20 px-8 py-8 space-y-5 text-sm font-mono tracking-widest uppercase font-extrabold text-slate-200">
-            <a href="#about" class="block hover:text-amberGold">About</a>
-            <a href="#capabilities" class="block hover:text-amberGold">Qualifications</a>
-            <a href="#research" class="block hover:text-amberGold">Work & Tools</a>
-            <a href="#contact" class="block text-center py-3 bg-amberGold text-obsidian rounded-xl font-bold mt-4">Connect</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-300/90 border-b border-slate-300 px-8 py-8 space-y-5 text-sm font-mono tracking-widest uppercase font-extrabold text-amberDarkGold">
+            <a href="#about" class="block hover:text-obsidian">About</a>
+            <a href="#capabilities" class="block hover:text-obsidian">Qualifications</a>
+            <a href="#research" class="block hover:text-obsidian">Work & Tools</a>
+            <a href="#contact" class="block text-center py-3 bg-obsidian text-white rounded-xl font-bold mt-4">Connect</a>
         </div>
     </header>
 
@@ -105,7 +105,7 @@
                         
                         <!-- Clean Unhighlighted Subtitle -->
                         <div>
-                            <p class="text-xs font-mono text-amberGold font-extrabold uppercase tracking-widest">
+                            <p class="text-xs font-mono text-amberDarkGold font-extrabold uppercase tracking-widest">
                                 [ OFFENSIVE SECURITY ]
                             </p>
                         </div>
@@ -291,8 +291,8 @@
                     </div>
                 </section>
 
-                <!-- Footer (Sleek Semi-Transparent Slate Background) -->
-                <footer class="py-8 px-6 sm:px-10 bg-slate-200/60 border-t border-slate-300/80 font-mono text-xs text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <!-- Footer (Matching Soft Metallic Backdrop) -->
+                <footer class="py-8 px-6 sm:px-10 bg-slate-200/60 border-t border-slate-300 font-mono text-xs text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <div class="font-bold tracking-wider">
                         [Your Name] <span class="text-amberGold">/ NETRACE SEC</span>
                     </div>
